@@ -1,3 +1,4 @@
+#########################################################################
 Postgres Configuration with Root:
 1. download the tar file from postgresql.org
 2. untar
