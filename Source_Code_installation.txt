@@ -1,0 +1,32 @@
+Postgres Configuration with Root:
+1. download the tar file from postgresql.org
+2. untar
+3. cd  postgresql11
+4. ./configure
+5. make
+6. make install
+
+
+Initiating DB cluster:
+1. Create a data directory mkdir -p /opt/PostgreSQL/11/data/
+2. Change ownership and permission 
+chown -R postgres:postgres /opt/PostgreSQL/11/data/
+chmod 600 /opt/PostgreSQL/11/data/
+3. Run the initiate Cluster command from psql binaries
+./initdb -D /opt/PostgreSQL/11/data/ 
+
+Start Postgres Cluster:
+1. Change the port number in postgresql.conf file
+cd /opt/PostgreSQL/11/data/
+vi postgresql.conf
+:/port
+uncomment and change port to 5555 (user define)
+:wq! - save the file
+
+2. Start the Cluster - use psql binaries location
+./pg_ctl -D /opt/PostgreSQL/11/data/ start
+
+3. Connect to DB
+./psql -p 5555
+
+
