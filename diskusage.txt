@@ -9,3 +9,5 @@ do
      mail -s "Alert: Almost out of disk space $usep%" you@somewhere.com
   fi
 done
+
+#####disk usage#################################################################
